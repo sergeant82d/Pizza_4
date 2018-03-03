@@ -22,7 +22,7 @@
     }
 
     .divFooter {
-        background-color:blue;
+        background-color:forestgreen;
         text-align:center;
         font-size:small;
         border: 1px solid black;
@@ -30,7 +30,7 @@
     }
 </style>
 
-    <asp:ContentPlaceHolder ID ="Image" runat ="server">
+    <asp:ContentPlaceHolder ID = "Image" runat ="server" >
     </asp:ContentPlaceHolder>
 
     <asp:ContentPlaceHolder ID="head" runat="server" >
@@ -47,24 +47,26 @@
 <body>
     <form id="form1" runat="server">
         <div class ="divHeader" runat ="server" style="vertical-align: middle; text-align: center; position: relative; display: table-header-group">
-            <asp:Image  ID="Pizza_Dog" ImageUrl ="~/Pizza_Dog.jpg" runat="server" BackColor ="Black" />
-            <br />
-            <asp:Label runat ="server" ID ="lblTitle" Text ="Brad's BadA$$ Bizza"  Font-Bold Font-Italic Font-Size="X-Large" ></asp:Label>
-            <br />
-            <asp:Menu ID="Menu1" runat="server" DataSourceID="SiteMapDataSource1" DynamicMenuItemStyle-BackColor="Yellow"  ></asp:Menu>
-            <asp:SiteMapDataSource ID="SiteMapeDataSource1" runat="server" />
-        </div>
-        <br />
 
-        <div>
-            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
-            </asp:ContentPlaceHolder>
-        </div>
-        <br />
+        <table>
+            <tr>
+                <asp:Image  ID="Pizza_Dog" ImageUrl = "~/Images/Pizza_Dog.jpg" runat="server" BackColor ="Black" />
+                <h1>
+                    <asp:Label runat ="server" ID ="lblTitle"  Text ="Brad's BadA$$ Bizza"  Font-Bold="true" Font-Italic="true" Font-Size="X-Large" ></asp:Label>
+                </h1>
 
-        <div class ="divFooter" runat ="server" >
-            Copyright 2018 - Brad's BadA$$ Bizza
-        </div>
+                <asp:Menu ID="Menu1" runat="server" DataSourceID="SiteMapDataSource1" DynamicMenuItemStyle-BackColor="Yellow" Font-Names="Comic Sans MS"  ></asp:Menu>
+                <asp:SiteMapDataSource ID="SiteMapeDataSource1" runat="server" />
+            </tr>
+                <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                </asp:ContentPlaceHolder>
+
+            <div class ="divFooter" runat ="server" >
+                Copyright 2018 - Brad's BadA$$ Bizza
+            </div>
+
+        </table>
+    </div>
     </form>
 </body>
 

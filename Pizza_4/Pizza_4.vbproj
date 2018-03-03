@@ -98,7 +98,7 @@
     <Content Include="History.aspx" />
     <Content Include="Map.aspx" />
     <Content Include="Menu.aspx" />
-    <Content Include="Pizza_Dog.jpg" />
+    <Content Include="Images\Pizza_Dog.jpg" />
     <Content Include="Web.config" />
     <Content Include="Welcome.aspx" />
   </ItemGroup>
