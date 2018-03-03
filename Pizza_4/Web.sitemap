@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<siteMap xmlns="http://schemas.microsoft.com/AspNet/SiteMap-File-1.0" >
+  
+  <siteMapNode url="~/Default.aspx" title="Home"  description="Come on home to Brad's Bizza">
+    <siteMapNode url="Menu.aspx" title="Menu"  description="Pick out some (or all!) of our yummy offerings" />
+    <siteMapNode url="Welcome.aspx" title="Welcome to BadA$$ Bizza"  description="We're glad you're here!" />
+    <siteMapNode url="History.aspx" title="History of Pizza"  description="Learn more about where Pizza comes from" />
+    <siteMapNode url="Contact.aspx" title="Contact Us"  description="How to get in touch with us" />
+    <siteMapNode url="Map.aspx" title="Directions"  description="Map and Directions to Brad's BadA$$ Bizza" />
+  </siteMapNode>
+</siteMap>

@@ -1,0 +1,71 @@
+﻿<%@ Master Language="VB" AutoEventWireup="false" CodeBehind="Pizza.master.vb" Inherits="Pizza_4.Pizza" %>
+
+<!DOCTYPE html>
+
+<html>
+
+<head runat="server">
+
+<title>"Brad's BadA$$ Bizza"</title>
+<style>
+    body {
+        background-color:red;
+    }
+
+    .divHeader {
+        background-color:wheat;
+        text-align:left;
+        font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        font-stretch:expanded;
+        font-size:x-large;
+        border:double ridge thick;
+    }
+
+    .divFooter {
+        background-color:blue;
+        text-align:center;
+        font-size:small;
+        border: 1px solid black;
+        padding: 8px;
+    }
+</style>
+
+    <asp:ContentPlaceHolder ID ="Image" runat ="server">
+    </asp:ContentPlaceHolder>
+
+    <asp:ContentPlaceHolder ID="head" runat="server" >
+    </asp:ContentPlaceHolder>
+
+    <asp:SiteMapDataSource ID="SiteMapDataSource1" runat="server" ShowStartingNode="true" />
+    <asp:SiteMapPath ID="SiteMapPath1" runat="server" PathSeparator=" > " RenderCurrentNodeAsLink="false">
+    </asp:SiteMapPath>
+
+</head>
+
+
+
+<body>
+    <form id="form1" runat="server">
+        <div class ="divHeader" runat ="server" style="vertical-align: middle; text-align: center; position: relative; display: table-header-group">
+            <asp:Image  ID="Pizza_Dog" ImageUrl ="~/Pizza_Dog.jpg" runat="server" BackColor ="Black" />
+            <br />
+            <asp:Label runat ="server" ID ="lblTitle" Text ="Brad's BadA$$ Bizza"  Font-Bold Font-Italic Font-Size="X-Large" ></asp:Label>
+            <br />
+            <asp:Menu ID="Menu1" runat="server" DataSourceID="SiteMapDataSource1" DynamicMenuItemStyle-BackColor="Yellow"  ></asp:Menu>
+            <asp:SiteMapDataSource ID="SiteMapeDataSource1" runat="server" />
+        </div>
+        <br />
+
+        <div>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+        <br />
+
+        <div class ="divFooter" runat ="server" >
+            Copyright 2018 - Brad's BadA$$ Bizza
+        </div>
+    </form>
+</body>
+
+</html>
